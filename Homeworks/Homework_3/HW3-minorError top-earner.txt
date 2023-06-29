@@ -1,0 +1,64 @@
+void top_earner(int month_data[][7], int rows, int cols, float money[][2]){
+
+ FILE *f = fopen("Top_earners.txt", "w"); // makes the file we are going to write to. 
+    if(f == NULL){
+        printf("Error opening file\n");
+        return;
+    }
+
+    // Calculate the revenue for each item
+    float total_revenue[rows];
+    for (int i = 0; i < rows; i++) {
+        int item = month_data[i][0];
+        int total_quantity = 0;
+        float total_sales = 0;
+        float total_cost = 0;
+        
+        // Calculate the quantity, sales, and cost for each item
+        for (int j = 1; j < cols; j++) {
+            int quantity = month_data[i][j];
+            total_quantity += quantity;
+            total_sales += quantity * money[i][0];
+            total_cost += quantity * money[i][1];
+        }
+        
+        // Calculate the revenue for each item
+        total_revenue[item] = total_sales - total_cost;
+    }
+
+    //Sorting the items in decending order based on revenue
+
+    int item_index[rows];
+
+    for(int i = 0; i < rows - 1; i++){
+        for(int j = i + 1; j < rows; j++){
+            if(total_revenue[j] > total_revenue[item_index[i]]){
+
+                int temp = item_index[i];
+                item_index[i] = item_index[j];
+                item_index[j] = temp;
+            
+            }
+        }
+    }
+
+    //Write the data
+
+    //header
+    fprintf(f,"Item   #  Revenue\n");
+
+    //data
+    int count = 0;
+    for(int i = 0; i < rows && count < 10; i++){
+        int item = item_index[item];
+
+        int amount_total = 0;
+        for(int j = 1; j < cols; j++){
+            int amount_partial = month_data[item][j];
+            amount_total += amount_partial;
+        }
+        fprintf(f, "%d   %d  %.2f\n", item, amount_total, total_revenue[item]);
+        count++;
+    }
+    fclose(f);
+}   

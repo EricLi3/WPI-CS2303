@@ -1,0 +1,33 @@
+Main function: 
+
+Print prompt asking user to select a task (1: Calculate overall revenue, 2: Calculate register balance, 3: Calculate sales for an item)
+Store user input in a variable
+If user input is invalid, print error message and exit program
+
+If user input is valid, ask user for input file name and store in a variable
+Open input file using fopen() and store file pointer in a variable
+
+If user selected option 1, call overall_revenue() function and pass file pointer as parameter
+
+If user selected option 2, call balance() function and pass file pointer as parameter
+
+If user selected option 3, ask user for item to analyze and output file name, and whether to append or overwrite the output file
+Call tally() function and pass file pointer, item, and output file name as parameters
+_________________________________________________________________________________________________________________________________________________
+overall_revenue() function: 
+intitalize variables item cost, item id and revenue. 
+In overall_revenue() function, read file using fscanf() identifying the pairs of item id and the item price and calculate overall revenue
+by adding the item prices up.
+_________________________________________________________________________________________________________________________________________________
+balance() function:
+initalize variables item cost, item id and final balance
+
+In balance() function, read file using fscanf() identifying the pairs of item id and the item price. Identifying the first row and 
+initalizing the balance with the starter value. Then we will add on to that with each item price and calculate register balance
+_________________________________________________________________________________________________________________________________________________
+tally() function:
+initalize variables item cost, item id and occurrences
+
+In tally() function, read file using fscanf() and tally number of times a particular item was sold and the total revenue from that item
+Return calculated values to main()
+Print results to terminal and output file as specified by user

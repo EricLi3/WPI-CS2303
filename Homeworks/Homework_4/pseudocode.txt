@@ -1,0 +1,43 @@
+1. Create a function "read_sales_reports" that takes the filename of the sales reports and the arrays to store the data as parameters.
+    a. Open the file in read mode.
+    b. Loop through the file to read the item code and cost for each sales item.
+    c. Store the item code in the first column of the sales array and the cost in the corresponding month's column.
+    d. Close the file.
+
+2. Create a function "read_cost_data" that takes the filename of the cost data and the cost array as parameters.
+    a. Open the file in read mode.
+    b. Loop through the file to read the item code, sales cost, and purchase cost.
+    c. Store the item code in the first column of the cost array and the sales cost and purchase cost in the second and third columns respectively.
+    d. Close the file.
+
+3. Create a function "get_totals" that takes the sales array, the number of items, and the number of months as parameters.
+    a. Open a file "Total_sales.txt" in write mode.
+    b. Loop through the sales array to sum up the sales for each item.
+    c. Write the item code and total sales for each item to the file.
+    d. Close the file.
+
+4. Create a function "get_profits" that takes the sales array, the arrays made from the Costs.txt file, the number of items, and the number of months as parameters.
+    a. Open a file "Profits.txt" in write mode.
+    b. Loop through the sales array and cost array to calculate the revenue, cost, and profit for each item.
+    c. Write the item code, sales, cost, revenue, and profit for each item to the file.
+    d. Close the file.
+
+5. Create a function "top_earners" that takes the month_data array, the arrays made from the Costs.txt file, the number of items, and the number of months as parameters.
+    a. Create an array to store the revenue for each item.
+    b. Loop through the sales array and cost array to calculate the revenue for each item.
+    c. Sort the revenue array in descending order.
+    d. Maybe use bubble sort or some other thing to sort from high to low
+    e. Open a file "Top_earners.txt" in write mode.
+    f. Create a tally up to 10
+    g. Loop through the revenue array to write the item code and revenue for the top 10 items to the file.
+    h. Close the file.
+
+6. Create functions readCosts and readPurch which both read from the Costs.txt file and put individual data in their own repective arrays. 
+    readCosts takes and reads the Cost column of the Costs.txt file into an array. readPurch takes and reads the Purchase column of the Costs.txt file into an array.
+
+7. Modify previous functions to be working for a varying number of months. Namely changing the parameters to include the costs and purch arrays. 
+
+8. Create a main function that calls the read_sales_reports and read_cost_data functions to read the data from the files and stores it in the arrays.
+ Also Call the get_totals, get_profits, and top_earners functions to generate the sales reports.
+
+9. Modify the main function to now take in command line argunments using the int argc and the char*argv[] things instead of just having void. 

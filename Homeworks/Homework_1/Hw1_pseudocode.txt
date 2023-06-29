@@ -1,0 +1,53 @@
+Main function:
+
+Prompt the user for a year
+Get the value from the terminal and store it in a variable
+Calls printCalendar with argunments the givenYear and calls the get_year_start method to get the first day.
+____________________________________________________________________________________________________________
+isLeap() function:
+
+takes the year number
+if year % 4 is 0 and year % 100 is not equal 0, leap year *or* if year % 100 is 0, then the year % 400 has to also be 0
+     then the year is a leap year (1)
+     Else, the year is not a leap year (0)
+____________________________________________________________________________________________________________
+printCalendar function:
+
+loops through all the months of the year and calls the printMonth method
+for every iteration of the loop.
+____________________________________________________________________________________________________________
+printMonth function:
+Calls the printMonthName function and prints out the days of the month in calendar form using a loop.
+
+takes the year number, the month, and the starting day of that particular month. 
+print to the screen the days of the week : Sun Mon Tue Wed Thu Fri Sat
+                                            0   1   2   3   4   5   6
+
+Loop over all days before the start_day, printing 3 blank spaces each time. If not Sunday, print an extra space.
+
+Calls the printMonthName function to get the number of days in the month
+
+Determine the start day of the next month 
+
+Loop over all days of the month. 
+
+    print a formated number, with 5 spaces.
+    
+____________________________________________________________________________________________________________
+printMonthName function : 
+
+Initialize values for days in a specified month
+
+Use the values for year and month from the user somehow further up
+
+Use a switch statement to switch between each month and with the number of days in each case with 0 being 
+January and 11 being December and everything in between.
+
+If the entered value for month matches a number from 0 to 11, change the days variable to 
+match that of the number of days in that month. 
+
+We accounted for the days in Feb by implementing the isLeap function, for when the year is a leap year, there is 29 days, otherwise, 28 days.
+
+Break / exit the statement
+
+Return the days variable.

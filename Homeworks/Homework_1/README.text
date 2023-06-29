@@ -1,0 +1,20 @@
+calendar.c
+Eric Li
+
+Summary : This program displays a calendar for an arbitrary year. We prompt the user for a year, 
+and when they run the program, enter a year when prompted to, and press enter, the program will print a
+calendar for the specified year.
+
+Issues : while writing this program, the hardest part for me was formatting the output to pass the autograder. I used the hash docunment
+to assist me in solving this and found it useful. 
+
+How to use this program: (Assuming that you are in the directory where prime_number.c is in)
+
+1. We first have to compile the code, so assuming you have the gcc compiler set up on your computer,
+type "gcc -Wall calendar.c -o out.exe" in the terminal which will compile the code and make an executable file called out.exe.
+
+2. To run the program, type "./out.exe" in the terminal; right under where you just typed, and you should see a prompt in the terminal
+asking you to enter a year. So enter a year and click enter, and you will see a 12 month calendar printed out of your specified year. 
+
+Sources : Got the method for determing if an entered year is a leap year or not from
+"The C Programming Language second Edition K&R".
