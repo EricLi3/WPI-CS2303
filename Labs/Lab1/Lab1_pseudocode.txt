@@ -1,0 +1,15 @@
+PrintMonthName
+
+Initialize values for days in a specified month
+
+Use the values for year and month from the user somehow further up
+
+Use a switch statement to switch between each month and with the number of days in each case with 0 being 
+January and 11 being December and everything in between.
+
+If the entered value for month matches a number from 0 to 11, change the days variable to 
+match that of the number of days in that month. 
+
+Break / exit the statement
+
+Return the days variable.
